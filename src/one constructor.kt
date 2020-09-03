@@ -2,18 +2,24 @@ import java.lang.Integer.sum
 
 fun main()
 {
-    Sum(10,2)
+
+  val sum= Sum(10,2)
+
+    println("Add the two numbers = ${sum.add()} ")
 }
 
+class Sum constructor(number1:Int , number2:Int){
+   var Summation=0; var num=0; var num2=0;
 
-
-
-class Sum(number1:Int , number2:Int){
-
-    init {
-        var Summation=number1+number2;
-        println("Add the two numbers = $Summation ")
+    init {   if(number1>=0 && number2>=0)   {  num =number1;   num2=number2;add(); }
+             else { println("The number is not positive")}
     }
+   public fun add():Int{
+        Summation=num+num2;
+       return Summation;
+    }
+
+
 
 
 }
